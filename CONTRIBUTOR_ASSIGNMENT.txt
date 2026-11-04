@@ -1,5 +1,5 @@
-NOEL — PROJECT FILE ASSIGNMENT
+PRADHYUMN — PROJECT FILE ASSIGNMENT
 
-Extract these files into the root of the shared GitHub repository. This is your assigned first half: project setup, MySQL foundation, inventory, suppliers and purchasing. Review and understand the code, run it, make genuine improvements/fixes, then commit your own work using your GitHub account.
+Do NOT create a separate repository. After Noel pushes his initial project files, clone the SAME repository. Extract these assigned files into the cloned repository root, preserving the folder structure, then review, run, and make genuine improvements/fixes in your assigned modules: recipes, orders, waste, analytics, authentication and MongoDB. Commit using your own GitHub account and push your branch / open a pull request.
 
-IMPORTANT: Do not upload .env.local, passwords, JWT secrets, node_modules, or .next. Pradhyumn's files will be added to the SAME repository after your initial push.
+Some of your modules depend on shared setup and library files Noel uploads first. Wait until his initial push is complete. Never upload .env.local, passwords, JWT secrets, node_modules, or .next.

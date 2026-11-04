@@ -1,0 +1,1 @@
+import pool from '@/lib/db';import {json,fail} from '@/lib/http';import {requireUser} from '@/lib/auth';export async function GET(req:Request){const a=requireUser(req);if('error'in a)return json({error:a.error},a.status);try{const [r]:any=await pool.query('SELECT * FROM Dish ORDER BY Dish_Name');return json(r)}catch(e){return fail(e)}}
