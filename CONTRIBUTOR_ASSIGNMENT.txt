@@ -1,0 +1,5 @@
+NOEL — PROJECT FILE ASSIGNMENT
+
+Extract these files into the root of the shared GitHub repository. This is your assigned first half: project setup, MySQL foundation, inventory, suppliers and purchasing. Review and understand the code, run it, make genuine improvements/fixes, then commit your own work using your GitHub account.
+
+IMPORTANT: Do not upload .env.local, passwords, JWT secrets, node_modules, or .next. Pradhyumn's files will be added to the SAME repository after your initial push.

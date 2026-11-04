@@ -1,0 +1,4 @@
+import jwt from 'jsonwebtoken';
+export function signToken(user:any){return jwt.sign({id:user.User_ID,name:user.Name,role:user.Role,email:user.Email},process.env.JWT_SECRET||'development_only_change_me',{expiresIn:'12h'});}
+export function getUser(req:Request){try{const token=req.headers.get('authorization')?.replace(/^Bearer\s+/i,'') || req.headers.get('cookie')?.split(';').map(x=>x.trim()).find(x=>x.startsWith('token='))?.slice(6);if(!token)return null;return jwt.verify(token,process.env.JWT_SECRET||'development_only_change_me') as any;}catch{return null}}
+export function requireUser(req:Request,roles:string[]=[]){const user=getUser(req);if(!user)return {error:'Authentication required',status:401};if(roles.length&&!roles.includes(user.role))return {error:'Insufficient permissions',status:403};return {user};}
